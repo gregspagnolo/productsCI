@@ -3,9 +3,7 @@
 	<title>Showing All Products</title>
 </head>
 <body>
-	<?php if($this->session->flashdata("login_errors"))
-              echo $this->session->flashdata("login_errors"); ?>
-
+	
 	<table border="1">
 		<tr>
 			<th>Name</th>

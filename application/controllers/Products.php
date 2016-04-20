@@ -15,7 +15,7 @@ class Products extends CI_Controller {
 		$results = $this->Product->all();
 		if(empty($results))
 		{
-			echo "Sorry there's no products added yet. Please <a href=\"/products/new\">add one</a>";
+			echo "Sorry there's no products added yet. Please <a href=\"/products/new_products\">add one</a>";
 		}
 		else
 		{
@@ -23,7 +23,7 @@ class Products extends CI_Controller {
 		}
 	}
 
-	public function new()
+	public function new_products()
 	{
 		$this->load->view('products/productsnew');
 	}
@@ -37,7 +37,7 @@ class Products extends CI_Controller {
 	    if ($this->form_validation->run() == FALSE)
 	    {
       		$this->session->set_flashdata("login_errors", validation_errors());
-      		redirect('/products/new');
+      		redirect('/products/new_products');
 	    }
 	    else
 	    {
